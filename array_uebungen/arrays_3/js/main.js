@@ -28,27 +28,25 @@ return ArrayAllMax
 
 console.log(arr)
 
-el('info').innerHTML = findMax(arr);
-// el('info').innerHTML += findMaxv2(arr);
+function findMax2(arr) {
+   let max = arr[0][0]
+   console.log(max)
+   arr.forEach(function(val) {
+      val.forEach(function(el){
+         if(el > max ){
+            max = el
+         }
+      })
+   })
+      return max
+}
+
+
+// el('info').innerHTML = findMax(arr);
+el('info').innerHTML = findMax2(arr);
 
 
 //second try
-
-// function findMaxv2(arrProp){
-// let ArrayInnerMax = [];
-// function sortMax(a,b){
-//   return a - b; 
-// }
-// // 1,2,6,55,78.....
-
-// for( arr of arrProp ){
-//    console.log(arr);
-// }
-
-
-// return ArrayInnerMax
-// };	
-
 
 
 
